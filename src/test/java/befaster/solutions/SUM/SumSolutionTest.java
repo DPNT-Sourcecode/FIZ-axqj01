@@ -19,4 +19,14 @@ public class SumSolutionTest {
     public void compute_sum() {
         assertThat(sum.compute(1, 1), equalTo(2));
     }
+
+    @Test
+    public void compute_sum_of_zero() {
+        assertThat(sum.compute(0, 0), equalTo(0));
+    }
+
+    @Test(expected = RuntimeException.class)
+    public void compute_sum_of_negative_num() {
+        assertThat(sum.compute(0, -1), equalTo(0));
+    }
 }
