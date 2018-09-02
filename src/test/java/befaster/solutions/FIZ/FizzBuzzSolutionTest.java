@@ -39,4 +39,19 @@ public class FizzBuzzSolutionTest {
         assertThat(fizz.fizzBuzz(331), is("fizz"));
     }
 
+    @Test
+    public void check_fizz_buzz_333() {
+        assertThat(fizz.fizzBuzz(333), is("fizz fake deluxe"));
+    }
+
+    @Test
+    public void check_fizz_buzz_555() {
+        assertThat(fizz.fizzBuzz(555), is("fizz buzz fake deluxe"));
+    }
+
+    @Test
+    public void check_fizz_buzz_666() {
+        assertThat(fizz.fizzBuzz(666), is("fizz deluxe"));
+    }
+
 }

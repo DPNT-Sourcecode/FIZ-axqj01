@@ -12,7 +12,8 @@ public class FizzBuzzSolution {
     private static final String THE_NUMBER_IS_INVALID = "The number: %s is invalid.";
     private static final String FIZZ = "fizz ";
     private static final String BUZZ = "buzz ";
-    private static final String DELUX = "deluxe ";
+    private static final String DELUX = "deluxe";
+    private static final String FAKE = "fake ";
     private static final int DIVIDER_3 = 3;
     private static final int DIVIDER_5 = 5;
 
@@ -27,11 +28,18 @@ public class FizzBuzzSolution {
         result.append(fizzBuzzResolver(num, DIVIDER_5, BUZZ));
 
         if (digitsAreIdenticalInNumAboveTen(num)) {
+            if(isOddNumber(num)){
+                result.append(FAKE);
+            }
             result.append(DELUX);
         }
 
         return result.length() == 0 ? String.valueOf(num) : result.toString().trim();
 
+    }
+
+    private static boolean isOddNumber(int num){
+        return (num & 1) == 1;
     }
 
     private static boolean digitsAreIdenticalInNumAboveTen(int num) {
