@@ -5,7 +5,12 @@ import befaster.runner.SolutionNotImplementedException;
 public class HelloSolution {
     public String hello(String friendName) {
 
-        return "Hello, World!";
+        String worldname = "World";
 
+        if(friendName == null){
+            friendName = worldname;
+        }
+
+        return String.format("Hello, %s!", friendName);
     }
 }
