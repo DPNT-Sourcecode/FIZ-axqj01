@@ -50,8 +50,8 @@ public class FizzBuzzSolutionTest {
     }
 
     @Test
-    public void check_fizz_buzz_666() {
-        assertThat(fizz.fizzBuzz(666), is("fizz deluxe"));
+    public void check_fizz_buzz_36() {
+        assertThat(fizz.fizzBuzz(36), is("fizz deluxe"));
     }
 
 }

@@ -25,6 +25,7 @@ public class FizzBuzzSolution {
         result.append(fizzBuzzResolver(num, DIVIDER_5, BUZZ));
 
         if (isHipstersDelux(num)) {
+
             if (isOddNumber(num)) {
                 result.append(FAKE);
             }
