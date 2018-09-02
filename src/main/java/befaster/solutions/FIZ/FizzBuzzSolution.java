@@ -12,7 +12,7 @@ public class FizzBuzzSolution {
     private static final String THE_NUMBER_IS_INVALID = "The number: %s is invalid.";
     private static final String FIZZ = "fizz ";
     private static final String BUZZ = "buzz ";
-    private static final String DELUX = "delux ";
+    private static final String DELUX = "deluxe ";
     private static final int DIVIDER_3 = 3;
     private static final int DIVIDER_5 = 5;
 
