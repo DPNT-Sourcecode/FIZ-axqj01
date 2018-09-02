@@ -1,9 +1,6 @@
 package befaster.solutions.FIZ;
 
-import befaster.runner.SolutionNotImplementedException;
-
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -27,8 +24,8 @@ public class FizzBuzzSolution {
         result.append(fizzBuzzResolver(num, DIVIDER_3, FIZZ));
         result.append(fizzBuzzResolver(num, DIVIDER_5, BUZZ));
 
-        if (digitsAreIdenticalInNumAboveTen(num)) {
-            if(isOddNumber(num)){
+        if (isHipstersDelux(num)) {
+            if (isOddNumber(num)) {
                 result.append(FAKE);
             }
             result.append(DELUX);
@@ -38,7 +35,12 @@ public class FizzBuzzSolution {
 
     }
 
-    private static boolean isOddNumber(int num){
+    private static boolean isHipstersDelux(int num) {
+        return (reminderIsEmpty(num, DIVIDER_3) && hasNumber(num, DIVIDER_3)
+                || reminderIsEmpty(num, DIVIDER_5) && hasNumber(num, DIVIDER_5));
+    }
+
+    private static boolean isOddNumber(int num) {
         return (num & 1) == 1;
     }
 
