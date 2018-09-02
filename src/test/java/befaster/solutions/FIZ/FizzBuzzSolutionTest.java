@@ -34,4 +34,9 @@ public class FizzBuzzSolutionTest {
         assertThat(fizz.fizzBuzz(15), is("fizz buzz"));
     }
 
+    @Test
+    public void check_fizz_buzz_33() {
+        assertThat(fizz.fizzBuzz(331), is("fizz"));
+    }
+
 }
