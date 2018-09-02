@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class FizzBuzzSolutionTest {
@@ -19,12 +18,20 @@ public class FizzBuzzSolutionTest {
 
     @Test
     public void check_fizz_buzz() {
-        assertThat(fizz.fizzBuzz(1), is(1));
+        assertThat(fizz.fizzBuzz(1), is("1"));
     }
 
     @Test
-    public void check_fizz_buzz() {
-        assertThat(fizz.fizzBuzz(1), is(1));
+    public void check_fizz_buzz_mult_three() {
+        assertThat(fizz.fizzBuzz(3), is("fizz"));
+    }
+    @Test
+    public void check_fizz_buzz_mult_five() {
+        assertThat(fizz.fizzBuzz(10), is("buzz"));
+    }
+    @Test
+    public void check_fizz_buzz_both() {
+        assertThat(fizz.fizzBuzz(15), is("fizz buzz"));
     }
 
 }
